@@ -23,7 +23,8 @@ node{
   
   stage('Maven Build'){ 
     //  sh '/Applications/apache-maven-3.6.3/bin/mvn clean install -f "/Users/subrat/.jenkins/workspace/pipeline_dfly-app/dfly/pom.xml"'
-    }
+     sh 'ng build'
+  }
 
   stage('Docker Build, Push'){
       sh "/usr/local/bin/docker --version"
