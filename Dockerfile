@@ -7,7 +7,7 @@ COPY package.json package.json
 RUN npm install
 COPY . .
 #RUN npm run build --prod
-RUN ng build --dev
+RUN ng build --prod
 
 FROM nginx:alpine
 LABEL author="Preston Lamb"
