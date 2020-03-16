@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 COPY package.json package.json
 RUN npm install --silent
 COPY . .
-RUN ng build --prod
+RUN npm run build --prod
 
 FROM nginx:alpine
 LABEL author="Preston Lamb"
