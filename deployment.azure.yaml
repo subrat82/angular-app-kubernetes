@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta2 # for versions before 1.9.0 use apps/v1beta2 
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2 
 kind: Deployment 
 metadata: 
   name: angular-deployment 
@@ -17,3 +17,18 @@ spec:
         image: houssemdocker/angular-app:#{Build.BuildId}#
         ports: 
         - containerPort: 90
+--- 
+# https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service  
+kind: Service 
+apiVersion: v1 
+metadata: 
+  name: angular-service 
+spec: 
+  selector: 
+    app: angular 
+  ports: 
+  - protocol: TCP 
+    port: 90 
+    targetPort: 90 
+  type: LoadBalancer
+
