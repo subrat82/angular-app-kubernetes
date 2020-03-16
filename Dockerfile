@@ -1,5 +1,5 @@
 # stage 1
-FROM node:latest as node
+FROM node
 WORKDIR /app
 COPY . .
 RUN npm install
