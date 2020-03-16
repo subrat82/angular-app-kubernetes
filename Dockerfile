@@ -1,12 +1,13 @@
 # stage 1
 FROM johnpapa/angular-cli as angular-built
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY package.json package.json
 #RUN npm install --silent
 RUN npm install
 COPY . .
 #RUN npm run build --prod
-RUN ng build --prod
+RUN ng build --dev
 
 FROM nginx:alpine
 LABEL author="Preston Lamb"
