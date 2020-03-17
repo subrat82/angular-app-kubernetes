@@ -1,6 +1,6 @@
 node{
   def Namespace = "default"
-  def ImageName = "subratit/projects-mar-15"
+  def ImageName = "subratit/projects-mar-16"
   def ImageTag = "latest"
   def Creds	= "076eed1a-ddda-4fcc-b8bd-5fbf6fa738fd"
 
