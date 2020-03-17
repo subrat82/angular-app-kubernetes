@@ -39,7 +39,7 @@ node{
       //sh 'docker login --username=subratit --email=subratit@gmail.com docker.io'
      // sh 'docker login -u subratit docker.io'
      // sh 'docker login -u "subratit" -p "Sasmita123*" docker.io'
-      sh "/usr/local/bin/docker tag ${ImageName}:${ImageTag}"
+      sh "/usr/local/bin/docker tag subratit/projects-mar-16:latest ${ImageName}:${ImageTag}"
       sh "/usr/local/bin/docker build -t ${ImageName}:${ImageTag} ."
       sh "echo build successfully"
       sh "/usr/local/bin/docker push ${ImageName}"
