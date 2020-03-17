@@ -35,8 +35,8 @@ RUN npm install
 # COPY . /usr/src/app
 COPY . .
 # RUN npm run build --prod
-RUN ng update @angular/cli --migrate-only --from=1.7.4
-RUN ng build -- --prod
+RUN ng update @angular/cli
+RUN ng build --prod
 #RUN ng build
 
 FROM nginx:alpine
