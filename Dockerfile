@@ -4,8 +4,8 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 RUN npm install --silent
-RUN ng serve
-# npm run build
+RUN ng update @angular/cli --migrate-only --from=1.7.4
+RUN npm run build --prod
 
 COPY . .
 
