@@ -25,7 +25,7 @@
 #COPY /Users/subrat/docker-desktop-software/kubernetes-project-yaml-files/dfly-deployment.yml /usr/share/nginx/html
 
 
-stage 1
+# stage 1
 FROM johnpapa/angular-cli as angular-built
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
