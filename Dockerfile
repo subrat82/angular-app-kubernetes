@@ -15,7 +15,7 @@ FROM node:latest as node
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . .
-RUN npm install
+RUN npm install --silent
 RUN npm run build --prod
 
 # # stage 2
