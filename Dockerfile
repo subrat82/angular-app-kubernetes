@@ -4,7 +4,8 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 RUN npm install --silent
-RUN npm run build
+RUN ng serve
+# npm run build
 
 COPY . .
 
