@@ -22,7 +22,8 @@ RUN npm install
 # COPY . /usr/src/app
 COPY . .
 # RUN npm run build --prod
-RUN ng build
+RUN npm run ng build -- --prod
+#RUN ng build
 
 FROM nginx:alpine
 LABEL author="Preston Lamb"
