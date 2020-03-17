@@ -39,10 +39,10 @@ node{
       //sh 'docker login --username=subratit --email=subratit@gmail.com docker.io'
      // sh 'docker login -u subratit docker.io'
      // sh 'docker login -u "subratit" -p "Sasmita123*" docker.io'
-      sh "/usr/local/bin/docker build -t projects-mar-18 ."
-      sh "/usr/local/bin/docker tag projects-mar-18 subratit/projects-mar-18:latest"
+      sh "/usr/local/bin/docker build -t projects-mar-19 ."
+      sh "/usr/local/bin/docker tag projects-mar-19 subratit/projects-mar-19:latest"
       sh "echo build successfully"
-      sh "/usr/local/bin/docker push subratit/projects-mar-18:latest"
+      sh "/usr/local/bin/docker push subratit/projects-mar-19:latest"
       //  }
     //}
 
