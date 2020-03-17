@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
       - name: angular 
-        image: subratit/projects-mar-16:latest #houssemdocker/angular-app:v1 
+        image: subratit/projects-mar-18:latest #houssemdocker/angular-app:v1 
         ports: 
         - containerPort: 80 
 --- 
