@@ -11,7 +11,7 @@
 
 # CMD [ "npm", "start" ]
 
-FROM node
+FROM node:latest as node
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . .
