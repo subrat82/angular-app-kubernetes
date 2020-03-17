@@ -1,6 +1,6 @@
 node{
   def Namespace = "default"
-  def ImageName = "subratit/projects-mar-16"
+  def ImageName = "subratit/projects-mar-17"
   def ImageTag = "latest"
   def Creds	= "076eed1a-ddda-4fcc-b8bd-5fbf6fa738fd"
 
@@ -39,6 +39,7 @@ node{
       //sh 'docker login --username=subratit --email=subratit@gmail.com docker.io'
      // sh 'docker login -u subratit docker.io'
      // sh 'docker login -u "subratit" -p "Sasmita123*" docker.io'
+      sh "/usr/local/bin/docker tag ${ImageName}:${ImageTag} ."
       sh "/usr/local/bin/docker build -t ${ImageName}:${ImageTag} ."
       sh "echo build successfully"
       sh "/usr/local/bin/docker push ${ImageName}"
