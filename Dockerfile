@@ -3,8 +3,8 @@ FROM node:10-alpine
 WORKDIR /usr/src/app
 
 COPY package*.json ./
-RUN npm install
-RUN npm run build --prod
+RUN npm install --silent
+RUN npm run build
 
 COPY . .
 
