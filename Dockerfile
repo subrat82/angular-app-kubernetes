@@ -11,7 +11,7 @@
 
 # CMD [ "npm", "start" ]
 
-FROM node:latest
+FROM node:latest as node
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . .
@@ -20,7 +20,7 @@ RUN npm run build --prod
 
 # # stage 2
 FROM nginx:alpine
-COPY --from=node:latest /usr/src/app/dist/angular-app /usr/share/nginx/html
+COPY --from=node /usr/src/app/dist/angular-app /usr/share/nginx/html
 # #
 #COPY /Users/subrat/docker-desktop-software/kubernetes-project-yaml-files/dfly-deployment.yml /usr/share/nginx/html
 
